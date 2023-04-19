@@ -43,6 +43,9 @@ function DrawerAppBar(props) {
         <AppBar component="nav" position="sticky" sx={{ background: '#fff', boxShadow: 'none', top: 0, }}>
             <Container>
                 <Toolbar sx={{ justifyContent: 'space-between', }}>
+                    <Box>
+                        <img src='../images/logo.png' alt='logo' width={'80px'} />
+                    </Box>
                     <IconButton
                         color="black"
                         aria-label="open drawer"
@@ -52,9 +55,6 @@ function DrawerAppBar(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Box>
-                        <img src='../images/logo.png' alt='logo' width={'80px'} />
-                    </Box>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
                             <Link key={item} href='#' underline="none" sx={{ color: '#000', fontWeight: '600', fontSize: '14px', fontFamily: 'Montserrat', textTransform: 'capitalize', padding: '6px 13px' }}>
